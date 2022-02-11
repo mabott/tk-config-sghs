@@ -493,6 +493,20 @@ settings.tk-multi-publish2.alias.asset_step:
    - name: Publish to ShotGrid
      hook: "{self}/publish_file.py"
      settings: {}
+   - name: Scene Validation and Cleanup 
+     hook: "{engine}/tk-multi-publish2/basic/scene_validation.py"
+     settings:
+      Checks:
+        - name: Unused Shaders
+          description: Check for unused shaders
+          required: True
+          check_func: check_unused_shaders
+          fix_func: delete_unused_shaders
+        - name: Delete Null Nodes
+          description: Delete null nodes
+          required: False
+          check_func: check_null_nodes
+          fix_func: delete_null_nodes
    - name: Upload for review
      hook: "{self}/upload_version.py"
      settings: {}
