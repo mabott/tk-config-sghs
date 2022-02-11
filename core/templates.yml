@@ -638,6 +638,9 @@ paths:
     # The location of published Alias files
     alias_asset_publish:
         definition: '@asset_root/publish/alias/{name}.v{version}.wire'
+    # The location of staged Alias files for publish
+    alias_asset_staging:
+        definition: '@asset_root/staging/alias/{name}.v{version}.wire'
 
     # Alias translations
 
