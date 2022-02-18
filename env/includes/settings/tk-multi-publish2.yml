@@ -490,23 +490,28 @@ settings.tk-multi-publish2.alias.asset_step:
   collector_settings:
       Work Template: alias_asset_work
   publish_plugins:
+   - name: Scene Validation & Cleanup 
+     hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_scene_validation.py"
+     settings:
+      Validation:
+        - key: unused_shaders
+          auto: True
+        - key: null_nodes
+          required: False
+          checked: False
+        - key: empty_layers
+          required: False
+        - key: unused_cos
+          required: False
+        - key: locators
+          required: False
+        - key: construction_history
+          required: False
+        - key: metadata
+          required: False
    - name: Publish to ShotGrid
      hook: "{self}/publish_file.py"
      settings: {}
-   - name: Scene Validation and Cleanup 
-     hook: "{engine}/tk-multi-publish2/basic/scene_validation.py"
-     settings:
-      Checks:
-        - name: Unused Shaders
-          description: Check for unused shaders
-          required: True
-          check_func: check_unused_shaders
-          fix_func: delete_unused_shaders
-        - name: Delete Null Nodes
-          description: Delete null nodes
-          required: False
-          check_func: check_null_nodes
-          fix_func: delete_null_nodes
    - name: Upload for review
      hook: "{self}/upload_version.py"
      settings: {}
@@ -531,6 +536,7 @@ settings.tk-multi-publish2.alias.asset_step:
    - name: Publish Annotations to ShotGrid
      hook: "{engine}/tk-multi-publish2/basic/publish_annotations.py"
      settings: {}
+  pre_publish: "{engine}/tk-multi-publish2/basic/pre_publish.py"
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 

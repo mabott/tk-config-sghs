@@ -29,9 +29,15 @@ apps.tk-multi-breakdown.location:
   name: tk-multi-breakdown
   version: v1.8.1
 apps.tk-multi-breakdown2.location:
-  type: app_store
+  type: dev
   name: tk-multi-breakdown2
   version: v0.2.3
+  windows_path: Z:\shotgun\venvs/SHOT-3781-scene-validation//tk/tk-multi-breakdown2
+  mac_path: /opt/shotgun/venvs/SHOT-3781-scene-validation/tk/tk-multi-breakdown2
+apps.tk-multi-data-validation.location:
+  type: dev
+  windows_path: Z:\shotgun\venvs/SHOT-3781-scene-validation/tk/tk-multi-data-validation
+  mac_path: /opt/shotgun/venvs/SHOT-3781-scene-validation/tk/tk-multi-data-validation
 apps.tk-multi-demo.location:
   type: app_store
   name: tk-multi-demo
@@ -45,9 +51,11 @@ apps.tk-multi-loader2.location:
   name: tk-multi-loader2
   version: v1.21.1
 apps.tk-multi-publish2.location:
-  type: app_store
+  type: dev
   name: tk-multi-publish2
   version: v2.6.1
+  windows_path: Z:\shotgun\venvs/SHOT-3781-scene-validation/tk/tk-multi-publish2
+  mac_path: /opt/shotgun/venvs/SHOT-3781-scene-validation/tk/tk-multi-publish2
 apps.tk-multi-pythonconsole.location:
   type: app_store
   name: tk-multi-pythonconsole

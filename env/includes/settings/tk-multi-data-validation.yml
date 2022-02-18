@@ -1,0 +1,41 @@
+# Copyright (c) 2017 Shotgun Software Inc.
+#
+# CONFIDENTIAL AND PROPRIETARY
+#
+# This work is provided "AS IS" and subject to the Shotgun Pipeline Toolkit
+# Source Code License included in this distribution package. See LICENSE.
+# By accessing, using, copying or modifying this work you indicate your
+# agreement to the Shotgun Pipeline Toolkit Source Code License. All rights
+# not expressly granted therein are reserved by Shotgun Software Inc.
+
+################################################################################
+
+includes:
+- ../app_locations.yml
+
+################################################################################
+
+# ---- Alias
+
+# asset_step
+settings.tk-multi-data-validation.alias.asset_step:
+  hook_scene_validator: "{engine}/tk-multi-data-validation/basic/scene_validator.py"
+  rules:
+    - key: unused_shaders
+      auto: True
+    - key: null_nodes
+      required: False
+      checked: False
+    - key: empty_layers
+      required: False
+    - key: unused_cos
+      required: False
+    - key: locators
+      required: False
+    - key: construction_history
+      required: False
+    - key: metadata
+      required: False
+  Work Template: alias_asset_work
+  Staging Template: alias_asset_staging
+  location: "@apps.tk-multi-data-validation.location"
