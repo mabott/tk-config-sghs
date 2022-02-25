@@ -24,10 +24,10 @@ settings.tk-multi-data-validation.alias.asset_step:
     - key: unused_shaders
       auto: True
     - key: null_nodes
-      required: False
+      required: True
       checked: False
     - key: empty_layers
-      required: False
+      required: True
     - key: unused_cos
       required: False
     - key: locators

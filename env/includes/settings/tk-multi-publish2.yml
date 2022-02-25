@@ -503,7 +503,16 @@ settings.tk-multi-publish2.alias.asset_step:
    - name: Publish to ShotGrid
      hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
      settings:
+       Work Template: alias_asset_work
        Publish Template: alias_asset_publish
+       Staging Template: alias_asset_staging
+       rules:
+        - key: unused_shaders
+          auto: True
+        # - key: null_nodes
+          # required: False
+        - key: empty_layers
+          required: False
    - name: Create 3D Version for Review
      hook: "{self}/upload_version.py:{engine}/tk-multi-publish2/basic/upload_version.py"
      settings:
@@ -518,7 +527,7 @@ settings.tk-multi-publish2.alias.asset_step:
    - name: Publish Annotations to ShotGrid
      hook: "{engine}/tk-multi-publish2/basic/publish_annotations.py"
      settings: {}
-   - name: Publish Clean Version to ShotGrid
+   - name: Publish Validated Scene to ShotGrid
      hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_validated_scene.py"
      settings:
        rules:
@@ -526,7 +535,6 @@ settings.tk-multi-publish2.alias.asset_step:
           auto: True
         - key: null_nodes
           required: False
-          checked: False
         - key: empty_layers
           required: False
         # - key: unused_cos
