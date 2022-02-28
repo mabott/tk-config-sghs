@@ -28,14 +28,21 @@ settings.tk-multi-data-validation.alias.asset_step:
       checked: False
     - key: empty_layers
       required: True
-    - key: unused_cos
-      required: False
-    - key: locators
-      required: False
     - key: construction_history
-      required: False
+      required: True
+    - key: unused_cos
+      required: True
+    - key: locators
+      required: True
+    - key: instances
+    - key: pivots
+    - key: zero_transform
     - key: metadata
-      required: False
+      manual: True
+    - key: vred_shaders
+      manual: True
+    - key: layer_shaders
+      manual: True
   Work Template: alias_asset_work
   Staging Template: alias_asset_staging
   location: "@apps.tk-multi-data-validation.location"
