@@ -36,7 +36,7 @@ apps.tk-multi-data-validation.location:
   type: git_branch
   path: https://github.com/shotgunsoftware/tk-multi-data-validation.git
   branch: main
-  version: 9c3f7df
+  version: d7a586d
 apps.tk-multi-demo.location:
   type: app_store
   name: tk-multi-demo
