@@ -507,11 +507,9 @@ settings.tk-multi-publish2.alias.asset_step:
        Publish Template: alias_asset_publish
        Staging Template: alias_asset_staging
        rules:
-        - key: unused_shaders
+        - key: shader_unused
           auto: True
-        # - key: null_nodes
-          # required: False
-        - key: empty_layers
+        - key: layer_is_empty
           required: False
    - name: Create 3D Version for Review
      hook: "{self}/upload_version.py:{engine}/tk-multi-publish2/basic/upload_version.py"
@@ -531,20 +529,12 @@ settings.tk-multi-publish2.alias.asset_step:
      hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_validated_scene.py"
      settings:
        rules:
-        - key: unused_shaders
+        - key: shader_unused
           auto: True
-        - key: null_nodes
+        - key: node_is_null
           required: False
-        - key: empty_layers
+        - key: layer_is_empty
           required: False
-        # - key: unused_cos
-          # required: False
-        # - key: locators
-          # required: False
-        # - key: construction_history
-          # required: False
-        # - key: metadata
-          # required: False
   help_url: *help_url
   location: "@apps.tk-multi-publish2.location"
 
