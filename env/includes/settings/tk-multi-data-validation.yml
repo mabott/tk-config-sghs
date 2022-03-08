@@ -25,7 +25,6 @@ settings.tk-multi-data-validation.alias.asset_step:
       auto: True
     - key: node_is_null
       required: True
-      checked: False
     - key: layer_is_empty
       required: True
     - key: node_has_construction_history
