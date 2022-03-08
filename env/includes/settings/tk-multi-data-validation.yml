@@ -21,33 +21,34 @@ includes:
 settings.tk-multi-data-validation.alias.asset_step:
   hook_scene_validator: "{engine}/tk-multi-data-validation/basic/scene_validator.py"
   rules:
-    - key: unused_shaders
+    - key: shader_unused
       auto: True
-    - key: null_nodes
+    - key: node_is_null
       required: True
-    - key: empty_layers
+    - key: layer_is_empty
       required: True
-    - key: construction_history
+    - key: node_has_construction_history
       required: True
-    - key: unused_cos
+    - key: cos_unused
       required: True
     - key: locators
       required: True
-    - key: instances
-    - key: pivots
-    - key: zero_transform
-    - key: layer_shaders
-    - key: vred_shaders
-    - key: referenced_geometry
-    - key: symmetry_moderate
-    - key: symmetry_strict
-    - key: layers_have_only_groups
-    - key: layers_have_single_group
-    - key: groups_have_single_level_heirarchy
-    - key: layer_group_names_match
-    - key: default_layer_allowed_object_types
-    - key: default_layer_required_objects
+    - key: node_instances
+    - key: node_pivots_at_origin
+    - key: node_has_zero_transform
+    - key: layer_has_single_shader
+    - key: shader_is_vred_compatible
+    - key: references_exist
+    - key: layer_symmetry_moderate
+    - key: layer_symmetry_strict
+    - key: layer_nodes
+    - key: layer_has_single_item
+    - key: group_has_single_level_hierarchy
+    - key: layer_name_matches_assigned_nodes
+    - key: node_is_not_in_default_layer
+    - key: node_is_in_default_layer
     - key: metadata
+      manual: True
   Work Template: alias_asset_work
   Staging Template: alias_asset_staging
   location: "@apps.tk-multi-data-validation.location"
