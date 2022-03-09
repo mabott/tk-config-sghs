@@ -31,24 +31,37 @@ settings.tk-multi-data-validation.alias.asset_step:
       required: True
     - key: cos_unused
       required: True
-    - key: locators
-      required: True
     - key: node_instances
+      required: True
     - key: node_pivots_at_origin
+      required: True
     - key: node_has_zero_transform
+      required: True
     - key: layer_has_single_shader
+      required: True
     - key: shader_is_vred_compatible
+      required: True
     - key: references_exist
+      required: True
     - key: layer_symmetry_moderate
+      required: True
     - key: layer_symmetry_strict
+      required: True
     - key: layer_nodes
+      required: True
     - key: layer_has_single_item
+      required: True
     - key: group_has_single_level_hierarchy
-    - key: layer_name_matches_assigned_nodes
+      required: True
+    - key: node_name_matches_layer
+      required: True
     - key: node_is_not_in_default_layer
+      required: True
     - key: node_is_in_default_layer
+      required: True
     - key: metadata
       manual: True
+    - key: locators
   Work Template: alias_asset_work
   Staging Template: alias_asset_staging
   location: "@apps.tk-multi-data-validation.location"
