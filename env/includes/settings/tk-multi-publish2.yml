@@ -15,7 +15,7 @@ includes:
 
 ################################################################################
 
-publish_help_url: &help_url "https://support.shotgunsoftware.com/hc/en-us/articles/115000068574-Integrations-User-Guide#The%20Publisher"
+publish_help_url: &help_url "https://help.autodesk.com/view/SGSUB/ENU/?guid=SG_Supervisor_Artist_sa_integrations_sa_integrations_user_guide_html#the-publisher"
 
 ################################################################################
 
@@ -533,10 +533,10 @@ settings.tk-multi-publish2.alias.asset_step:
      hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
      settings:
        Publish Template: alias_asset_publish
-   - name: Create 3D Version for Review
+   - name: Create Version for Review
      hook: "{self}/upload_version.py:{engine}/tk-multi-publish2/basic/upload_version.py"
      settings:
-       3D Version: True
+       Version Type: 2D Version
    - name: Publish CATPart to ShotGrid
      hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_translation.py"
      settings:
@@ -574,10 +574,10 @@ settings.tk-multi-publish2.vred.asset_step:
      hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_session.py"
      settings:
        Publish Template: vred_asset_publish
-   - name: Create 2D Version for Review
+   - name: Create Version for Review
      hook: "{self}/upload_version.py:{engine}/tk-multi-publish2/basic/upload_session_version.py"
      settings:
-       3D Version: False
+       Version Type: 2D Version
    - name: Publish Rendering to ShotGrid
      hook: "{self}/publish_file.py:{engine}/tk-multi-publish2/basic/publish_rendering.py"
      settings:
