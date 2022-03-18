@@ -23,13 +23,11 @@ settings.tk-multi-data-validation.alias.asset_step:
   rules:
     - key: shader_unused
       auto: True
+    - key: shader_is_vred_compatible
+      required: True
     - key: node_is_null
       required: True
-    - key: layer_is_empty
-      required: True
     - key: node_has_construction_history
-      required: True
-    - key: cos_unused
       required: True
     - key: node_instances
       required: True
@@ -37,30 +35,33 @@ settings.tk-multi-data-validation.alias.asset_step:
       required: True
     - key: node_has_zero_transform
       required: True
-    - key: layer_has_single_shader
-      required: True
-    - key: shader_is_vred_compatible
-      required: True
-    - key: references_exist
-      required: True
-    - key: layer_symmetry_moderate
-      required: True
-    - key: layer_symmetry_strict
-      required: True
-    - key: layer_nodes
-      required: True
-    - key: layer_has_single_item
-      required: True
-    - key: group_has_single_level_hierarchy
-      required: True
-    - key: node_name_matches_layer
-      required: True
     - key: node_is_not_in_default_layer
       required: True
     - key: node_is_in_default_layer
       required: True
+    - key: node_name_matches_layer
+      required: True
+    - key: node_layer_matches_parent
+      required: True
+    - key: node_dag_top_level
+      required: True
+    - key: node_unused_curves_on_surface
+      required: True
+    - key: group_has_single_level_hierarchy
+      required: True
+    - key: layer_is_empty
+      required: True
+    - key: layer_has_single_shader
+      required: True
+    - key: layer_has_single_item
+      required: True
+    - key: layer_symmetry
+      required: True
     - key: metadata
       manual: True
+    - key: placeholder
+      manual: True
+    - key: references_exist
     - key: locators
   Work Template: alias_asset_work
   Staging Template: alias_asset_staging
