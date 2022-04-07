@@ -19,36 +19,70 @@ includes:
 
 # asset_step
 settings.tk-multi-data-validation.alias.asset_step:
-  hook_scene_validator: "{engine}/tk-multi-data-validation/basic/scene_validator.py"
+  # hook_data_validator: "{engine}/tk-multi-data-validation/basic/scene_data_validator.py"
   rules:
     - key: shader_unused
       auto: True
+      data_type: Shader
+    - key: shader_is_vred_compatible
+      required: True
+      data_type: Shader
     - key: node_is_null
       required: True
-    - key: layer_is_empty
-      required: True
+      data_type: Node
     - key: node_has_construction_history
       required: True
-    - key: cos_unused
-      required: True
-    - key: locators
-      required: True
+      data_type: Node
     - key: node_instances
+      required: True
+      data_type: Node
     - key: node_pivots_at_origin
+      required: True
+      data_type: Node
     - key: node_has_zero_transform
-    - key: layer_has_single_shader
-    - key: shader_is_vred_compatible
-    - key: references_exist
-    - key: layer_symmetry_moderate
-    - key: layer_symmetry_strict
-    - key: layer_nodes
-    - key: layer_has_single_item
+      required: True
+      data_type: Node
+    - key: node_is_not_in_layer
+      required: True
+      data_type: Node
+    - key: node_is_in_layer
+      required: True
+      data_type: Node
+      description: "Override the description. Layer checked is now L1"
+    - key: node_name_matches_layer
+      required: True
+      data_type: Node
+    - key: node_layer_matches_parent
+      required: True
+      data_type: Node
+    - key: node_dag_top_level
+      required: True
+      data_type: Node
+    - key: node_unused_curves_on_surface
+      required: True
+      data_type: Node
     - key: group_has_single_level_hierarchy
-    - key: layer_name_matches_assigned_nodes
-    - key: node_is_not_in_default_layer
-    - key: node_is_in_default_layer
+      required: True
+      data_type: Grouping
+    - key: layer_is_empty
+      required: True
+      data_type: Layer
+    - key: layer_has_single_shader
+      required: True
+      data_type: Layer
+    - key: layer_has_single_item
+      required: True
+      data_type: Layer
+    - key: layer_symmetry
+      required: True
+      data_type: Layer
     - key: metadata
       manual: True
+    - key: placeholder
+      manual: True
+    - key: references_exist
+      data_type: References
+    - key: locators
   Work Template: alias_asset_work
   Staging Template: alias_asset_staging
   location: "@apps.tk-multi-data-validation.location"
