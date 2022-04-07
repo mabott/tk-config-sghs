@@ -19,7 +19,7 @@ includes:
 
 # asset_step
 settings.tk-multi-data-validation.alias.asset_step:
-  # hook_data_validator: "{engine}/tk-multi-data-validation/basic/scene_data_validator.py"
+  hook_data_validator: "{engine}/tk-multi-data-validation/basic/scene_data_validator.py"
   rules:
     - key: shader_unused
       auto: True
